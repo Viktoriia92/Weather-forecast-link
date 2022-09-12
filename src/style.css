@@ -1,0 +1,115 @@
+body {
+  max-width: 50%;
+  border: 1px solid grey;
+  margin-top: 30px;
+  margin-left: 25%;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #eaf6f6;
+}
+h1 {
+  color: #6b7ad0;
+  margin-bottom: 0;
+  font-weight: bold;
+  padding-top: 24px;
+}
+small {
+  padding: 20px 10px 0px;
+}
+.search {
+  position: absolute;
+  right: 33%;
+  top: 60px;
+  padding: 7px 5px;
+  border-radius: 4px;
+  border: 1px solid grey;
+  width: 150px;
+  background-color: #eaf6f6;
+}
+button {
+  position: absolute;
+  right: 370px;
+  top: 47px;
+  border: transparent;
+  background: transparent;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 0;
+}
+#geolocation {
+  position: absolute;
+  right: 330px;
+  top: 59px;
+  cursor: pointer;
+  width: 40px;
+  height: 45px;
+  padding: 0;
+}
+h2 {
+  color: rgba(32, 32, 32, 0.801);
+  margin: 50px 0 0;
+  border: 1px solid grey;
+  border-radius: 4px;
+  font-weight: bolder;
+}
+.col-4 {
+  padding-right: 0;
+  padding-top: 20px;
+  padding-bottom: 0;
+}
+.currentlyCity {
+  font-size: 32px;
+  padding-bottom: 10px;
+}
+.currentlyTemperature,
+.linkCurrentlyTemperature {
+  color: #2c786c;
+  font-size: 40px;
+}
+.col {
+  font-size: 22px;
+  padding: 0;
+}
+p {
+  color: black;
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.days {
+  font-size: 26px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  color: #3bbdb5;
+  text-align: center;
+  font-weight: bolder;
+  padding-top: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+.date {
+  color: rgba(32, 32, 32, 0.801);
+  font-size: 16px;
+  padding: 10px 0px 10px;
+}
+.temperature,
+.forecastTemp {
+  color: #2c786c;
+  font-weight: bolder;
+  font-size: 24px;
+}
+.information {
+  color: #ed9f66;
+  padding: 10px 0px;
+}
+a {
+  color: #2c786c;
+}
+img {
+  padding-top: 10px;
+}
+.mainImg {
+  padding: 0;
+}
