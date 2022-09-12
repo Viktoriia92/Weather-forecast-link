@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather forecast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <h1>Weather Forecast</h1>
+    <small id="todaysDate"> Wednesday August 3rd 2022, 12.00 </small>
+    <form id="searching-form">
+      <input
+        class="search"
+        type="search"
+        autofocus="on"
+        autocomplete="off"
+        placeholder="Search city here"
+        id="search-input"
+      />
+      <button type="submit" id="submit">
+        <img
+          src="img/search icon.png"
+          alt="search button"
+          width="40px"
+          height="53px"
+        />
+      </button>
+      <img
+        id="geolocation"
+        src="img/home_location.png"
+        alt="Currently Location"
+      />
+    </form>
+    <button></button>
+    <h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <div class="currentlyCity" id="currentlyCity">City, Country</div>
+            <span class="currentlyTemperature" id="currentlyTemperature"
+              >11</span
+            >
+            <span class="linkCurrentlyTemperature">
+              <a href="#" id="currentlyTempCelLink">°C</a>|<a
+                href="#"
+                id="currentlyTempFahLink"
+                >°F
+              </a>
+            </span>
+          </div>
+          <div class="col-4">
+            <img class="mainImg" src="img/partly-cloudy.png" alt="Cloudy" />
+          </div>
+          <div class="col-4">
+            <div class="col" id="description">Partly cloudy</div>
+            <div class="col" id="humidity">Humidity: 70%</div>
+            <div class="col" id="wind">Wind: 6km/h</div>
+          </div>
+        </div>
+      </div>
+    </h2>
+    <p><strong> The forecast for the next 5 days </strong></p>
+    <h3>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="days">
+              <div id="forecastTodaysDay">TODAY</div>
+              <div class="date" id="forecastTodaysDate">August 3</div>
+              <span class="temperature" id="temperature"> 13 </span>
+              <span class="forecastTemp"
+                ><a href="#" id="forecastTempCelLink">°C</a>|<a
+                  href="#"
+                  id="forecastTempFavLink"
+                  >°F</a
+                >
+              </span>
+              <img src="img/hazy.png" alt="Sunshine" width="90" height="96" />
+              <div class="information" id="forecastInformation">Sunny</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="days">
+              <div id="forecastSecondDay">MON</div>
+              <div class="date" id="forecastSecondDate">August 4</div>
+              <span class="temperature" id="temperatureSecondDay"> 15 </span>
+              <span class="forecastTemp"
+                ><a href="#" id="forecastSecondTempCelLink">°C</a>|<a
+                  href="#"
+                  id="forecastSecondTempFavLink"
+                  >°F</a
+                >
+              </span>
+              <img src="img/sleet.png" alt="Rainy" width="90" height="96" />
+              <div class="information" id="forecastSecondInformation">
+                Rainy
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="days">
+              <div id="forecastThirdDay">TUE</div>
+              <div class="date" id="forecastThirdDate">August 5</div>
+              <span class="temperature" id="temperatureThirdDay"> 17 </span>
+              <span class="forecastTemp"
+                ><a href="#" id="forecastThirdTempCelLink">°C</a>|<a
+                  href="#"
+                  id="forecastThirdTempFavLink"
+                  >°F</a
+                >
+              </span>
+              <img src="img/wind.png" alt="Windy" width="90" height="96" />
+              <div class="information" id="forecastThirdInformation">Windy</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="days">
+              <div id="forecastFourthDay">WED</div>
+              <div class="date" id="forecastFourthDate">August 6</div>
+              <span class="temperature" id="temperatureFourthDay"> 18 </span>
+              <span class="forecastTemp"
+                ><a href="#" id="forecastFourthTempCelLink">°C</a>|<a
+                  href="#"
+                  id="forecastFourthTempFavLink"
+                  >°F</a
+                >
+              </span>
+              <img
+                src="img/thunder-storm.png"
+                alt="Stormy"
+                width="90"
+                height="96"
+              />
+              <div class="information" id="forecastFourthInformation">
+                Stormy
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="days">
+              <div id="forecastFifthDay">THU</div>
+              <div class="date" id="forecastFifthDate">August 7</div>
+              <span class="temperature" id="temperatureFifthDay"> 16 </span>
+              <span class="forecastTemp"
+                ><a href="#" id="forecastFifthTempCelLink">°C</a>|<a
+                  href="#"
+                  id="forecastFifthTempFavLink"
+                  >°F</a
+                >
+              </span>
+              <img src="img/cloudy.png" alt="Сloudy" width="90" height="96" />
+              <div class="information" id="forecastFifthInformation">
+                Сloudy
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </h3>
+    <script src="src/app.js"></script>
+  </body>
+</html>
