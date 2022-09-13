@@ -4,12 +4,10 @@ body {
 .weather-app {
   max-width: 600px;
   border: 1px solid grey;
-  margin-top: 30px;
-  margin-left: 25%;
+  margin: 20px auto;
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0px 20px 10px;
   background-color: #f8fcfb;
 }
 h1 {
@@ -23,18 +21,18 @@ small {
 }
 .search {
   position: absolute;
-  right: 35%;
-  top: 60px;
+  right: 34%;
+  top: 52px;
   padding: 7px 5px;
   border-radius: 4px;
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
   width: 140px;
   background-color: #eaf6f6;
 }
 button {
   position: absolute;
-  right: 400px;
-  top: 47px;
+  right: 388px;
+  top: 40px;
   border: transparent;
   background: transparent;
   font-size: 30px;
@@ -43,8 +41,8 @@ button {
 }
 #geolocation {
   position: absolute;
-  right: 365px;
-  top: 59px;
+  right: 350px;
+  top: 52px;
   cursor: pointer;
   width: 40px;
   height: 45px;
@@ -53,7 +51,7 @@ button {
 h2 {
   color: rgba(32, 32, 32, 0.801);
   margin: 50px 0 0;
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
   border-radius: 4px;
   font-weight: bolder;
 }
@@ -63,7 +61,7 @@ h2 {
   padding-bottom: 0;
 }
 .currentlyCity {
-  font-size: 32px;
+  font-size: 30px;
   padding-bottom: 10px;
 }
 .currentlyTemperature,
@@ -84,7 +82,7 @@ p {
 }
 .days {
   font-size: 26px;
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
   border-radius: 4px;
   color: #3bbdb5;
   text-align: center;
