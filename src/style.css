@@ -2,7 +2,7 @@ body {
   background-color: #eaf6f6;
 }
 .weather-app {
-  max-width: 50%;
+  max-width: 600px;
   border: 1px solid grey;
   margin-top: 30px;
   margin-left: 25%;
@@ -23,17 +23,17 @@ small {
 }
 .search {
   position: absolute;
-  right: 33%;
+  right: 35%;
   top: 60px;
   padding: 7px 5px;
   border-radius: 4px;
   border: 1px solid grey;
-  width: 150px;
+  width: 140px;
   background-color: #eaf6f6;
 }
 button {
   position: absolute;
-  right: 370px;
+  right: 400px;
   top: 47px;
   border: transparent;
   background: transparent;
@@ -43,7 +43,7 @@ button {
 }
 #geolocation {
   position: absolute;
-  right: 330px;
+  right: 365px;
   top: 59px;
   cursor: pointer;
   width: 40px;
