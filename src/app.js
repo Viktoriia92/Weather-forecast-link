@@ -273,8 +273,68 @@ function showCurrentlyWeather(response) {
   currentlyDescription.innerHTML = `${description}`;
   let forecastDescription = document.querySelector("#forecastInformation");
   forecastDescription.innerHTML = `${description}`;
-}
 
+  let mainImg = document.querySelector("#mainImg");
+  mainImg.setAttribute("alt", response.data.weather[0].main);
+
+  let weatherId = response.data.weather[0].id;
+  if (weatherId === 801) {
+    document.getElementById("mainImg").src = "img/partly-cloudy.png";
+  } else if (weatherId === 802) {
+    document.getElementById("mainImg").src = "img/fair.png";
+  } else if (weatherId === 803) {
+    document.getElementById("mainImg").src = "img/cloudy.png";
+  } else if (weatherId === 804) {
+    document.getElementById("mainImg").src = "img/fog.png";
+  } else if (weatherId === 800) {
+    document.getElementById("mainImg").src = "img/sunny.png";
+  } else if (weatherId === 600) {
+    document.getElementById("mainImg").src = "img/snow-shower.png";
+  } else if (weatherId === 601) {
+    document.getElementById("mainImg").src = "img/snow.png";
+  } else if (weatherId === 602) {
+    document.getElementById("mainImg").src = "img/flurries.png";
+  } else if (weatherId === 621) {
+    document.getElementById("mainImg").src = "img/blizzard.png";
+  } else if (weatherId === 622) {
+    document.getElementById("mainImg").src = "img/freezing.png";
+  } else if (weatherId === 500) {
+    document.getElementById("mainImg").src = "img/p-c-rain.png";
+  } else if (weatherId === 511) {
+    document.getElementById("mainImg").src = "img/sleet.png";
+  } else if (weatherId === 210) {
+    document.getElementById("mainImg").src = "img/chance-storm-d.png";
+  } else if (weatherId === 211 && 212 && 221) {
+    document.getElementById("mainImg").src = "img/thunder-storm.png";
+  } else if (weatherId === 200 && 201 && 202 && 230 && 231 && 232) {
+    document.getElementById("mainImg").src = "img/t-storm-rain.png";
+  } else if (weatherId === 520 && 521 && 522 && 531 && 313 && 314 && 321) {
+    document.getElementById("mainImg").src = "img/showers.png";
+  } else if (weatherId === 300 && 310) {
+    document.getElementById("mainImg").src = "img/fair-drizzle.png";
+  } else if (weatherId === 301 && 302 && 311 && 312) {
+    document.getElementById("mainImg").src = "img/drizzle.png";
+  } else if (weatherId === 501 && 502 && 503 && 504) {
+    document.getElementById("mainImg").src = "img/rainy.png";
+  } else if (weatherId === 611 && 612 && 613 && 615 && 616 && 620) {
+    document.getElementById("mainImg").src = "img/rainy-snow.png";
+  } else if (
+    weatherId === 701 &&
+    711 &&
+    721 &&
+    731 &&
+    741 &&
+    751 &&
+    761 &&
+    771 &&
+    781 &&
+    762
+  ) {
+    document.getElementById("mainImg").src = "img/smoke.png";
+  } else {
+    document.getElementById("mainImg").src = "img/na.png";
+  }
+}
 function showInformation(response) {
   let forecastSecondDayTemp = Math.round(response.data.list[8].main.temp);
   let temperatureSecondDay = document.querySelector("#temperatureSecondDay");
