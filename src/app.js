@@ -278,16 +278,16 @@ function showCurrentlyWeather(response) {
   mainImg.setAttribute("alt", response.data.weather[0].main);
 
   let weatherId = response.data.weather[0].id;
-  if (weatherId === 801) {
-    document.getElementById("mainImg").src = "img/partly-cloudy.png";
-  } else if (weatherId === 802) {
+  if (weatherId === 802) {
     document.getElementById("mainImg").src = "img/fair.png";
+  } else if (weatherId === 800) {
+    document.getElementById("mainImg").src = "img/sunny.png";
+  } else if (weatherId === 801) {
+    document.getElementById("mainImg").src = "img/partly-cloudy.png";
   } else if (weatherId === 803) {
     document.getElementById("mainImg").src = "img/cloudy.png";
   } else if (weatherId === 804) {
     document.getElementById("mainImg").src = "img/fog.png";
-  } else if (weatherId === 800) {
-    document.getElementById("mainImg").src = "img/sunny.png";
   } else if (weatherId === 600) {
     document.getElementById("mainImg").src = "img/snow-shower.png";
   } else if (weatherId === 601) {
@@ -298,13 +298,9 @@ function showCurrentlyWeather(response) {
     document.getElementById("mainImg").src = "img/blizzard.png";
   } else if (weatherId === 622) {
     document.getElementById("mainImg").src = "img/freezing.png";
-  } else if (weatherId === 500) {
-    document.getElementById("mainImg").src = "img/p-c-rain.png";
   } else if (weatherId === 511) {
     document.getElementById("mainImg").src = "img/sleet.png";
-  } else if (weatherId === 210) {
-    document.getElementById("mainImg").src = "img/chance-storm-d.png";
-  } else if (weatherId === 211 && 212 && 221) {
+  } else if (weatherId === 210 && 211 && 212 && 221) {
     document.getElementById("mainImg").src = "img/thunder-storm.png";
   } else if (weatherId === 200 && 201 && 202 && 230 && 231 && 232) {
     document.getElementById("mainImg").src = "img/t-storm-rain.png";
@@ -314,7 +310,7 @@ function showCurrentlyWeather(response) {
     document.getElementById("mainImg").src = "img/fair-drizzle.png";
   } else if (weatherId === 301 && 302 && 311 && 312) {
     document.getElementById("mainImg").src = "img/drizzle.png";
-  } else if (weatherId === 501 && 502 && 503 && 504) {
+  } else if (weatherId === 500 && 501 && 502 && 503 && 504) {
     document.getElementById("mainImg").src = "img/rainy.png";
   } else if (weatherId === 611 && 612 && 613 && 615 && 616 && 620) {
     document.getElementById("mainImg").src = "img/rainy-snow.png";
@@ -333,6 +329,17 @@ function showCurrentlyWeather(response) {
     document.getElementById("mainImg").src = "img/smoke.png";
   } else {
     document.getElementById("mainImg").src = "img/na.png";
+  }
+
+  let weatherIcon = response.data.weather[0].icon;
+  if (weatherIcon === "01n") {
+    document.getElementById("mainImg").src = "img/moon.png";
+  } else if (weatherIcon === "02n") {
+    document.getElementById("mainImg").src = "img/m-cloudy-night.png";
+  } else if (weatherIcon === "03n") {
+    document.getElementById("mainImg").src = "img/fog.png";
+  } else if (weatherIcon === "04n") {
+    document.getElementById("mainImg").src = "img/m-cloudy-night.png";
   }
 }
 function showInformation(response) {
