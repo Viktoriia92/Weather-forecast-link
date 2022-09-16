@@ -58,7 +58,11 @@ h2 {
 .col-4 {
   padding-right: 0;
   padding-top: 20px;
-  padding-bottom: 0;
+  padding-bottom: 35px;
+}
+.mainImg {
+  position: absolute;
+  top: -7%;
 }
 .currentlyCity {
   font-size: 30px;
@@ -110,7 +114,4 @@ a {
 }
 img {
   padding-top: 10px;
-}
-.mainImg {
-  padding: 0;
 }
