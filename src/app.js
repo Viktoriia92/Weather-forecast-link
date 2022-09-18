@@ -114,7 +114,8 @@ function showCurrentlyWeather(response) {
   let forecastTemperature = document.querySelector("#temperature");
   forecastTemperature.innerHTML = `${cityCurrentlyTemp}`;
 
-  function celsiusToFahrenheit() {
+  function celsiusToFahrenheit(event) {
+    event.preventDefault();
     currentlyTempCelLink.classList.remove("activ");
     currentlyTempFahLink.classList.add("activ");
     let fahrenheit = Math.round(cityCurrentlyTemp * 1.8 + 32);
@@ -123,7 +124,8 @@ function showCurrentlyWeather(response) {
   let currentlyTempFahLink = document.querySelector("#currentlyTempFahLink");
   currentlyTempFahLink.addEventListener("click", celsiusToFahrenheit);
 
-  function fahrenheitToCelsius() {
+  function fahrenheitToCelsius(event) {
+    event.preventDefault();
     currentlyTempCelLink.classList.add("activ");
     currentlyTempFahLink.classList.remove("activ");
     let cityCurrentlyTemp = Math.round(response.data.main.temp);
