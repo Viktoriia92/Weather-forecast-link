@@ -1,5 +1,4 @@
 let now = new Date();
-
 let days = [
   "Sunday",
   "Monday",
@@ -95,151 +94,6 @@ forecastFifthDate.innerHTML = `${dateFifthDay} ${monthFifthDay}`;
 let forecastFifthDay = document.querySelector("#forecastFifthDay");
 forecastFifthDay.innerHTML = `${dayFifthDay}`;
 
-function celsiusToFahrenheit() {
-  let celsius = 12;
-  let fahrenheit = Math.round(celsius * 1.8 + 32);
-  let currentlyTemperature = document.querySelector("#currentlyTemperature");
-  currentlyTemperature.innerHTML = `${fahrenheit}`;
-}
-let currentlyTempFahLink = document.querySelector("#currentlyTempFahLink");
-currentlyTempFahLink.addEventListener("click", celsiusToFahrenheit);
-
-function fahrenheitToCelsius() {
-  let fahrenheit = 54;
-  let celsius = Math.round((fahrenheit - 32) / 1.8);
-  let currentlyTemperature = document.querySelector("#currentlyTemperature");
-  currentlyTemperature.innerHTML = `${celsius}`;
-}
-let currentlyTempCelLink = document.querySelector("#currentlyTempCelLink");
-currentlyTempCelLink.addEventListener("click", fahrenheitToCelsius);
-
-function forecastCelsiusToFahrenheit() {
-  let celsius = 13;
-  let fahrenheit = Math.round(celsius * 1.8 + 32);
-  let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = `${fahrenheit}`;
-}
-let forecastTempFavLink = document.querySelector("#forecastTempFavLink");
-forecastTempFavLink.addEventListener("click", forecastCelsiusToFahrenheit);
-
-function forecastFahrenheitToCelsius() {
-  let fahrenheit = 55;
-  let celsius = Math.round((fahrenheit - 32) / 1.8);
-  let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = `${celsius}`;
-}
-let forecastTempCelLink = document.querySelector("#forecastTempCelLink");
-forecastTempCelLink.addEventListener("click", forecastFahrenheitToCelsius);
-
-function forecastSecondCelsiusToFahrenheit() {
-  let celsius = 15;
-  let fahrenheit = Math.round(celsius * 1.8 + 32);
-  let temperatureSecondDay = document.querySelector("#temperatureSecondDay");
-  temperatureSecondDay.innerHTML = `${fahrenheit}`;
-}
-let forecastSecondTempFavLink = document.querySelector(
-  "#forecastSecondTempFavLink"
-);
-forecastSecondTempFavLink.addEventListener(
-  "click",
-  forecastSecondCelsiusToFahrenheit
-);
-
-function forecastSecondFahrenheitToCelsius() {
-  let fahrenheit = 59;
-  let celsius = Math.round((fahrenheit - 32) / 1.8);
-  let temperatureSecondDay = document.querySelector("#temperatureSecondDay");
-  temperatureSecondDay.innerHTML = `${celsius}`;
-}
-let forecastSecondTempCelLink = document.querySelector(
-  "#forecastSecondTempCelLink"
-);
-forecastSecondTempCelLink.addEventListener(
-  "click",
-  forecastSecondFahrenheitToCelsius
-);
-
-function forecastThirdCelsiusToFahrenheit() {
-  let celsius = 17;
-  let fahrenheit = Math.round(celsius * 1.8 + 32);
-  let temperatureThirdDay = document.querySelector("#temperatureThirdDay");
-  temperatureThirdDay.innerHTML = `${fahrenheit}`;
-}
-let forecastThirdTempFavLink = document.querySelector(
-  "#forecastThirdTempFavLink"
-);
-forecastThirdTempFavLink.addEventListener(
-  "click",
-  forecastThirdCelsiusToFahrenheit
-);
-
-function forecastThirdFahrenheitToCelsius() {
-  let fahrenheit = 63;
-  let celsius = Math.round((fahrenheit - 32) / 1.8);
-  let temperatureThirdDay = document.querySelector("#temperatureThirdDay");
-  temperatureThirdDay.innerHTML = `${celsius}`;
-}
-let forecastThirdTempCelLink = document.querySelector(
-  "#forecastThirdTempCelLink"
-);
-forecastThirdTempCelLink.addEventListener(
-  "click",
-  forecastThirdFahrenheitToCelsius
-);
-
-function forecastFourthCelsiusToFahrenheit() {
-  let celsius = 18;
-  let fahrenheit = Math.round(celsius * 1.8 + 32);
-  let temperatureFourthDay = document.querySelector("#temperatureFourthDay");
-  temperatureFourthDay.innerHTML = `${fahrenheit}`;
-}
-let forecastFourthTempFavLink = document.querySelector(
-  "#forecastFourthTempFavLink"
-);
-forecastFourthTempFavLink.addEventListener(
-  "click",
-  forecastFourthCelsiusToFahrenheit
-);
-function forecastFourthFahrenheitToCelsius() {
-  let fahrenheit = 64;
-  let celsius = Math.round((fahrenheit - 32) / 1.8);
-  let temperatureFourthDay = document.querySelector("#temperatureFourthDay");
-  temperatureFourthDay.innerHTML = `${celsius}`;
-}
-let forecastFourthTempCelLink = document.querySelector(
-  "#forecastFourthTempCelLink"
-);
-forecastFourthTempCelLink.addEventListener(
-  "click",
-  forecastFourthFahrenheitToCelsius
-);
-function forecastFifthCelsiusToFahrenheit() {
-  let celsius = 16;
-  let fahrenheit = Math.round(celsius * 1.8 + 32);
-  let temperatureFifthDay = document.querySelector("#temperatureFifthDay");
-  temperatureFifthDay.innerHTML = `${fahrenheit}`;
-}
-let forecastFifthTempFavLink = document.querySelector(
-  "#forecastFifthTempFavLink"
-);
-forecastFifthTempFavLink.addEventListener(
-  "click",
-  forecastFifthCelsiusToFahrenheit
-);
-function forecastFifthFahrenheitToCelsius() {
-  let fahrenheit = 61;
-  let celsius = Math.round((fahrenheit - 32) / 1.8);
-  let temperatureFifthDay = document.querySelector("#temperatureFifthDay");
-  temperatureFifthDay.innerHTML = `${celsius}`;
-}
-let forecastFifthTempCelLink = document.querySelector(
-  "#forecastFifthTempCelLink"
-);
-forecastFifthTempCelLink.addEventListener(
-  "click",
-  forecastFifthFahrenheitToCelsius
-);
-
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
@@ -260,6 +114,24 @@ function showCurrentlyWeather(response) {
   let forecastTemperature = document.querySelector("#temperature");
   forecastTemperature.innerHTML = `${cityCurrentlyTemp}`;
 
+  function celsiusToFahrenheit() {
+    currentlyTempCelLink.classList.remove("activ");
+    currentlyTempFahLink.classList.add("activ");
+    let fahrenheit = Math.round(cityCurrentlyTemp * 1.8 + 32);
+    currentlyTemperature.innerHTML = `${fahrenheit}`;
+  }
+  let currentlyTempFahLink = document.querySelector("#currentlyTempFahLink");
+  currentlyTempFahLink.addEventListener("click", celsiusToFahrenheit);
+
+  function fahrenheitToCelsius() {
+    currentlyTempCelLink.classList.add("activ");
+    currentlyTempFahLink.classList.remove("activ");
+    let cityCurrentlyTemp = Math.round(response.data.main.temp);
+    currentlyTemperature.innerHTML = `${cityCurrentlyTemp}`;
+  }
+  let currentlyTempCelLink = document.querySelector("#currentlyTempCelLink");
+  currentlyTempCelLink.addEventListener("click", fahrenheitToCelsius);
+
   let humidity = Math.round(response.data.main.humidity);
   let currentlyHumidity = document.querySelector("#humidity");
   currentlyHumidity.innerHTML = `Humidity: ${humidity}%`;
@@ -268,7 +140,7 @@ function showCurrentlyWeather(response) {
   let currentlyWind = document.querySelector("#wind");
   currentlyWind.innerHTML = `Wind: ${wind}km/h`;
 
-  let description = response.data.weather[0].main;
+  let description = response.data.weather[0].description;
   let currentlyDescription = document.querySelector("#description");
   currentlyDescription.innerHTML = `${description}`;
   let forecastDescription = document.querySelector("#forecastInformation");
@@ -310,8 +182,6 @@ function showCurrentlyWeather(response) {
     document.getElementById("mainImg").src = "img/fair-drizzle.png";
   } else if (weatherId === 301 && 302 && 311 && 312) {
     document.getElementById("mainImg").src = "img/drizzle.png";
-  } else if (weatherId === 500 && 501 && 502 && 503 && 504) {
-    document.getElementById("mainImg").src = "img/rainy.png";
   } else if (weatherId === 611 && 612 && 613 && 615 && 616 && 620) {
     document.getElementById("mainImg").src = "img/rainy-snow.png";
   } else if (
@@ -327,6 +197,8 @@ function showCurrentlyWeather(response) {
     762
   ) {
     document.getElementById("mainImg").src = "img/smoke.png";
+  } else if (weatherId === 500 || 501 || 502 || 503 || 504) {
+    document.getElementById("mainImg").src = "img/rainy.png";
   } else {
     document.getElementById("mainImg").src = "img/na.png";
   }
@@ -359,25 +231,29 @@ function showInformation(response) {
   let temperatureFifthDay = document.querySelector("#temperatureFifthDay");
   temperatureFifthDay.innerHTML = `${forecastFifthDayTemp}`;
 
-  let forecastSecondDayDescription = response.data.list[8].weather[0].main;
+  let forecastSecondDayDescription =
+    response.data.list[8].weather[0].description;
   let forecastSecondInformation = document.querySelector(
     "#forecastSecondInformation"
   );
   forecastSecondInformation.innerHTML = `${forecastSecondDayDescription}`;
 
-  let forecastThirdDayDescription = response.data.list[16].weather[0].main;
+  let forecastThirdDayDescription =
+    response.data.list[16].weather[0].description;
   let forecastThirdInformation = document.querySelector(
     "#forecastThirdInformation"
   );
   forecastThirdInformation.innerHTML = `${forecastThirdDayDescription}`;
 
-  let forecastFourthDayDescription = response.data.list[24].weather[0].main;
+  let forecastFourthDayDescription =
+    response.data.list[24].weather[0].description;
   let forecastFourthInformation = document.querySelector(
     "#forecastFourthInformation"
   );
   forecastFourthInformation.innerHTML = `${forecastFourthDayDescription}`;
 
-  let forecastFifthDayDescription = response.data.list[32].weather[0].main;
+  let forecastFifthDayDescription =
+    response.data.list[32].weather[0].description;
   let forecastFifthInformation = document.querySelector(
     "#forecastFifthInformation"
   );
