@@ -73,6 +73,16 @@ h2 {
   color: #2c786c;
   font-size: 40px;
 }
+.linkCurrentlyTemperature .activ {
+  color: #2c786c;
+  cursor: default;
+}
+.linkCurrentlyTemperature .activ:hover {
+  text-decoration: none;
+}
+a {
+  color: #3277c1;
+}
 .col {
   font-size: 22px;
   padding: 0;
@@ -109,9 +119,15 @@ p {
   color: #ed9f66;
   padding: 10px 0px;
 }
-a {
-  color: #2c786c;
-}
+
 img {
   padding-top: 10px;
+}
+#description,
+#forecastInformation,
+#forecastSecondInformation,
+#forecastThirdInformation,
+#forecastFourthInformation,
+#forecastFifthInformation {
+  text-transform: capitalize;
 }
