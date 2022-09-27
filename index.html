@@ -82,22 +82,22 @@
       </h2>
       <p><strong> The forecast for the next 5 days </strong></p>
       <h3>
-        <div class="container">
+        <div class="container" id="forecast">
           <div class="row">
             <div class="col">
               <div class="days">
                 <div id="forecastTodaysDay">TODAY</div>
                 <div class="date" id="forecastTodaysDate">August 3</div>
-                <span class="temperature" id="temperature"> 13 </span>
+                <span class="temperature" id="temperature"> 13-15 </span>
                 <span class="forecastTemp"
-                  ><a href="#" id="forecastTempCelLink">°C</a>|<a
+                  ><a href="#" id="forecastTempCelLink" class="activ">°C</a>|<a
                     href="#"
                     id="forecastTempFavLink"
                     >°F</a
                   >
                 </span>
                 <img
-                  id="sunny"
+                  id="forecastImgFirstDay"
                   src="img/sunny.png"
                   alt="Sunshine"
                   width="90"
@@ -110,15 +110,21 @@
               <div class="days">
                 <div id="forecastSecondDay">MON</div>
                 <div class="date" id="forecastSecondDate">August 4</div>
-                <span class="temperature" id="temperatureSecondDay"> 15 </span>
+                <span class="temperature" id="temperatureSecondDay">
+                  15-17</span
+                >
                 <span class="forecastTemp"
-                  ><a href="#" id="forecastSecondTempCelLink">°C</a>|<a
-                    href="#"
-                    id="forecastSecondTempFavLink"
-                    >°F</a
-                  >
+                  ><a href="#" id="forecastSecondTempCelLink" class="activ"
+                    >°C</a
+                  >|<a href="#" id="forecastSecondTempFavLink">°F</a>
                 </span>
-                <img src="img/sleet.png" alt="Rainy" width="90" height="96" />
+                <img
+                  id="forecastImgSecondDay"
+                  src="img/sleet.png"
+                  alt="Rainy"
+                  width="90"
+                  height="96"
+                />
                 <div class="information" id="forecastSecondInformation">
                   Rainy
                 </div>
@@ -128,15 +134,20 @@
               <div class="days">
                 <div id="forecastThirdDay">TUE</div>
                 <div class="date" id="forecastThirdDate">August 5</div>
-                <span class="temperature" id="temperatureThirdDay"> 17 </span>
-                <span class="forecastTemp"
-                  ><a href="#" id="forecastThirdTempCelLink">°C</a>|<a
-                    href="#"
-                    id="forecastThirdTempFavLink"
-                    >°F</a
-                  >
+                <span class="temperature" id="temperatureThirdDay">
+                  17-21
                 </span>
-                <img src="img/wind.png" alt="Windy" width="90" height="96" />
+                <span class="forecastTemp"
+                  ><a href="#" id="forecastThirdTempCelLink" class="activ">°C</a
+                  >|<a href="#" id="forecastThirdTempFavLink">°F</a>
+                </span>
+                <img
+                  id="forecastImgThirdDay"
+                  src="img/wind.png"
+                  alt="Windy"
+                  width="90"
+                  height="96"
+                />
                 <div class="information" id="forecastThirdInformation">
                   Windy
                 </div>
@@ -146,15 +157,16 @@
               <div class="days">
                 <div id="forecastFourthDay">WED</div>
                 <div class="date" id="forecastFourthDate">August 6</div>
-                <span class="temperature" id="temperatureFourthDay"> 18 </span>
+                <span class="temperature" id="temperatureFourthDay">
+                  18-20
+                </span>
                 <span class="forecastTemp"
-                  ><a href="#" id="forecastFourthTempCelLink">°C</a>|<a
-                    href="#"
-                    id="forecastFourthTempFavLink"
-                    >°F</a
-                  >
+                  ><a href="#" id="forecastFourthTempCelLink" class="activ"
+                    >°C</a
+                  >|<a href="#" id="forecastFourthTempFavLink">°F</a>
                 </span>
                 <img
+                  id="forecastImgFourthDay"
                   src="img/thunder-storm.png"
                   alt="Stormy"
                   width="90"
@@ -169,15 +181,13 @@
               <div class="days">
                 <div id="forecastFifthDay">THU</div>
                 <div class="date" id="forecastFifthDate">August 7</div>
-                <span class="temperature" id="temperatureFifthDay"> 16 </span>
+                <span class="temperature" id="temperatureFifthDay"> 16-19</span>
                 <span class="forecastTemp"
-                  ><a href="#" id="forecastFifthTempCelLink">°C</a>|<a
-                    href="#"
-                    id="forecastFifthTempFavLink"
-                    >°F</a
-                  >
+                  ><a href="#" id="forecastFifthTempCelLink" class="activ">°C</a
+                  >|<a href="#" id="forecastFifthTempFavLink">°F</a>
                 </span>
                 <img
+                  id="forecastImgFifthDay"
                   src="img/partly-cloudy.png"
                   alt="Сloudy"
                   width="90"
