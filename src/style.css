@@ -80,12 +80,19 @@ h2 {
 .linkCurrentlyTemperature .activ:hover {
   text-decoration: none;
 }
-a {
-  color: #3277c1;
+.forecastTemp .activ {
+  color: #2c786c;
+  cursor: default;
+}
+.forecastTemp .activ:hover {
+  text-decoration: none;
 }
 .col {
   font-size: 22px;
   padding: 0;
+}
+a {
+  color: #3277c1;
 }
 p {
   color: black;
@@ -93,6 +100,9 @@ p {
   margin-bottom: 5px;
   margin-top: 30px;
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+img {
+  padding-top: 10px;
 }
 .days {
   font-size: 26px;
@@ -113,16 +123,13 @@ p {
 .forecastTemp {
   color: #2c786c;
   font-weight: bolder;
-  font-size: 24px;
+  font-size: 20px;
 }
 .information {
   color: #ed9f66;
-  padding: 10px 0px;
+  padding: 10px 0;
 }
 
-img {
-  padding-top: 10px;
-}
 #description,
 #forecastInformation,
 #forecastSecondInformation,
