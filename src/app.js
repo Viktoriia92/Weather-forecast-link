@@ -70,7 +70,7 @@ function date() {
   let dayFifthDay = daysAbbreviated[fifthDay.getDay()];
 
   let todaysDate = document.querySelector("#todaysDate");
-  todaysDate.innerHTML = `${day} ${date} ${month} ${year}, ${hours}.${minute}`;
+  todaysDate.innerHTML = `Last updated: ${day} ${date} ${month} ${year}, ${hours}.${minute}`;
   let forecastTodaysDate = document.querySelector("#forecastTodaysDate");
   forecastTodaysDate.innerHTML = `${date} ${month}`;
 
@@ -115,6 +115,9 @@ function showCurrentlyWeather(response) {
   currentlyTemperature.innerHTML = `${cityCurrentlyTemp}`;
   let forecastTemperature = document.querySelector("#temperature");
   forecastTemperature.innerHTML = `${cityCurrentlyTemp}`;
+  let country = response.data.sys.country;
+  let currentlyCountry = document.querySelector("#currentlyCountry");
+  currentlyCountry.innerHTML = `${country}`;
 
   function celsiusToFahrenheit(event) {
     event.preventDefault();
@@ -164,7 +167,7 @@ function showCurrentlyWeather(response) {
 
   let wind = Math.round(response.data.wind.speed);
   let currentlyWind = document.querySelector("#wind");
-  currentlyWind.innerHTML = `Wind: ${wind}km/h`;
+  currentlyWind.innerHTML = `Wind: ${wind} m/s`;
 
   let description = response.data.weather[0].description;
   let currentlyDescription = document.querySelector("#description");
