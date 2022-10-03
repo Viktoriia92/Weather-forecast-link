@@ -4,74 +4,78 @@ body {
 .weather-app {
   max-width: 600px;
   border: 1px solid grey;
-  margin: 20px auto;
+  margin: 10px auto;
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
-  padding: 0px 20px 10px;
+  padding: 0px 20px;
   background-color: #f8fcfb;
 }
-h1 {
+.main {
   color: #6b7ad0;
   margin-bottom: 0;
   font-weight: bold;
-  padding-top: 24px;
+  padding-top: 5px;
+  padding-right: 40px;
 }
-small {
-  padding: 20px 10px 0px;
+
+#searching-form {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
 }
 .search {
-  position: absolute;
-  right: 34%;
-  top: 52px;
-  padding: 7px 5px;
+  font-size: 14px;
   border-radius: 4px;
   border: 1px solid lightgrey;
-  width: 140px;
+  width: 125px;
+  height: 40px;
   background-color: #eaf6f6;
+  margin-top: 5px;
 }
 button {
-  position: absolute;
-  right: 388px;
-  top: 40px;
   border: transparent;
   background: transparent;
-  font-size: 30px;
   cursor: pointer;
+  margin: 0;
   padding: 0;
 }
 #geolocation {
-  position: absolute;
-  right: 350px;
-  top: 52px;
   cursor: pointer;
-  width: 40px;
-  height: 45px;
+  width: 45px;
+  height: 47px;
   padding: 0;
+  margin-top: 5px;
+}
+button {
+  width: 35px;
+  height: 40px;
 }
 h2 {
   color: rgba(32, 32, 32, 0.801);
-  margin: 50px 0 0;
+  margin: 30px 0 0;
   border: 1px solid lightgrey;
   border-radius: 4px;
   font-weight: bolder;
 }
-.col-4 {
-  padding-right: 0;
-  padding-top: 20px;
-  padding-bottom: 35px;
-}
 .mainImg {
-  position: absolute;
-  top: -7%;
+  display: flex;
+  justify-content: center;
+}
+#information {
+  padding-top: 10px;
 }
 .currentlyCity {
   font-size: 30px;
-  padding-bottom: 10px;
+  padding: 10px 0 0;
+}
+.currentlyCountry {
+  font-size: 20px;
+  padding-bottom: 5px;
 }
 .currentlyTemperature,
 .linkCurrentlyTemperature {
   color: #2c786c;
-  font-size: 40px;
+  font-size: 30px;
 }
 .linkCurrentlyTemperature .activ {
   color: #2c786c;
@@ -95,14 +99,11 @@ a {
   color: #3277c1;
 }
 p {
-  color: black;
+  color: rgba(32, 32, 32, 0.801);
   font-size: 14px;
   margin-bottom: 5px;
-  margin-top: 30px;
+  margin-top: 20px;
   font-family: Georgia, "Times New Roman", Times, serif;
-}
-img {
-  padding-top: 10px;
 }
 .days {
   font-size: 26px;
@@ -111,23 +112,25 @@ img {
   color: #3bbdb5;
   text-align: center;
   font-weight: bolder;
-  padding-top: 20px;
+  padding-top: 10px;
   font-family: "Times New Roman", Times, serif;
 }
 .date {
   color: rgba(32, 32, 32, 0.801);
   font-size: 16px;
-  padding: 10px 0px 10px;
+  padding: 5px 0px 5px;
 }
 .temperature,
 .forecastTemp {
   color: #2c786c;
   font-weight: bolder;
   font-size: 20px;
+  padding-bottom: 10px;
 }
 .information {
   color: #ed9f66;
-  padding: 10px 0;
+  padding: 5px 0 0;
+  font-size: 24px;
 }
 
 #description,
